@@ -2,7 +2,10 @@ import type { Config } from "tailwindcss";
 
 export default {
   darkMode: ["class"],
-  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
+  content: [
+    "./index.html",
+    "./src/**/*.{ts,tsx,js,jsx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -18,6 +21,9 @@ export default {
         'sans': ['Montserrat', 'sans-serif'],
       },
       colors: {
+        brand: '#b37651',
+        brandDark: '#7a4c33',
+        brandLight: '#d4b29a',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -56,18 +62,6 @@ export default {
           foreground: "hsl(var(--chocolate-foreground))",
         },
         copper: "hsl(var(--copper))",
-        brand: {
-          50: "#f7f3f0",
-          100: "#ede4dc",
-          200: "#d9c7b8",
-          300: "#c4a894",
-          400: "#b37651",
-          500: "#b37651",
-          600: "#9d5f3f",
-          700: "#7a4c33",
-          800: "#5c3a26",
-          900: "#3e2819",
-        },
       },
       backgroundImage: {
         'gradient-copper': 'var(--gradient-copper)',
