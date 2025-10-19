@@ -1,0 +1,21 @@
+{
+  "name": "palmador-static",
+  "version": "1.0.0",
+  "description": "Palmador Chocolatier - Site statique optimisé",
+  "scripts": {
+    "dev": "npx tailwindcss -i ./src-static/styles/input.css -o ./public-static/styles.css --watch",
+    "build": "npx tailwindcss -i ./src-static/styles/input.css -o ./public-static/styles.css --minify",
+    "serve": "npx http-server public-static -p 5173 -c-1",
+    "start": "npm run build && npm run serve"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss-animate": "^1.0.7",
+    "http-server": "^14.1.1"
+  },
+  "keywords": ["chocolatier", "static", "tailwind", "vanilla-js"],
+  "author": "Palmador Chocolatier",
+  "license": "MIT"
+}

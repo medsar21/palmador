@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://palmador-chocolatier.com/sitemap.xml
+
+# Optimisation pour les moteurs de recherche
+Crawl-delay: 1

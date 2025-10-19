@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Palmador Chocolatier - Chocolat de Luxe Artisanal | Kenitra</title>
+    <meta name="description" content="Palmador Chocolatier propose des chocolats artisanaux de luxe pour vos événements spéciaux. Découvrez nos créations pour mariages, anniversaires et occasions spéciales à Kenitra.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="./PALMA.svg">
+    <link rel="apple-touch-icon" href="./PALMA.svg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="min-h-screen bg-gradient-to-br from-[#f7f3ee] via-[#d4b29a]/20 to-[#f7f3ee]">
+    <!-- Navbar -->
+    <header class="sticky top-0 z-50 bg-white/70 backdrop-blur border-b border-brandLight/30">
+        <div class="mx-auto max-w-7xl px-3 sm:px-4 md:px-6 h-14 flex items-center justify-between">
+            <a href="./index.html" class="flex items-center gap-2 hover:scale-105 transition-transform">
+                <img src="./PALMA.svg" alt="Palmador" class="h-8 w-8">
+                <span class="font-serif text-lg text-brandDark">Palmador</span>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-4">
+                <a href="./index.html" class="relative px-2 py-1 text-sm font-medium transition-all duration-300 group text-brand">
+                    <span class="after:absolute after:left-0 after:-bottom-0.5 after:h-[2px] after:w-full after:bg-brand after:transition-all">Accueil</span>
+                </a>
+                <a href="./produits.html" class="relative px-2 py-1 text-sm font-medium transition-all duration-300 group hover:text-brand">
+                    <span class="after:absolute after:left-0 after:-bottom-0.5 after:h-[2px] after:w-0 after:bg-brand after:transition-all hover:after:w-full">Nos Produits</span>
+                </a>
+                <a href="./apropos.html" class="relative px-2 py-1 text-sm font-medium transition-all duration-300 group hover:text-brand">
+                    <span class="after:absolute after:left-0 after:-bottom-0.5 after:h-[2px] after:w-0 after:bg-brand after:transition-all hover:after:w-full">À propos</span>
+                </a>
+                <a href="https://drive.google.com/file/d/1p3f0E1imdBeOcS-DdcKqDrcNCQjilqkf/view?usp=sharing" target="_blank" rel="noreferrer" class="relative px-2 py-1 text-sm font-medium transition-all duration-300 group hover:text-brand">
+                    <span class="hover:underline underline-offset-8 decoration-brand/50">Catalogue</span>
+                </a>
+                <a href="./contact.html" class="relative px-2 py-1 text-sm font-medium transition-all duration-300 group hover:text-brand">
+                    <span class="after:absolute after:left-0 after:-bottom-0.5 after:h-[2px] after:w-0 after:bg-brand after:transition-all hover:after:w-full">Contact</span>
+                </a>
+                <div class="ml-2 flex items-center gap-2">
+                    <button class="relative hover:bg-brand/10 transition-all duration-300 hover:scale-110 p-2 rounded-full">
+                        <svg class="h-5 w-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                        </svg>
+                        <span data-target="favorites-badge" class="absolute -top-1 -right-1 h-5 w-5 p-0 flex items-center justify-center text-xs bg-red-500 text-white animate-pulse hidden">0</span>
+                    </button>
+                    <button class="relative hover:bg-brand/10 transition-all duration-300 hover:scale-110 p-2 rounded-full">
+                        <svg class="h-5 w-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-5v6a2 2 0 01-2 2H9a2 2 0 01-2-2v-6m8 0V9a2 2 0 00-2-2H9a2 2 0 00-2 2v4.01"></path>
+                        </svg>
+                        <span data-target="cart-badge" class="absolute -top-1 -right-1 h-5 w-5 p-0 flex items-center justify-center text-xs bg-brand text-white animate-pulse hidden">0</span>
+                    </button>
+                </div>
+            </nav>
+
+            <div class="flex items-center gap-2">
+                <div class="hidden lg:flex items-center space-x-4 text-sm text-brandDark/80">
+                    <a href="tel:+212530562079" class="flex items-center space-x-2 hover:text-brand transition-colors">
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                        </svg>
+                        <span>+212 530 56 20 79</span>
+                    </a>
+                </div>
+                
+                <button data-action="toggle-mobile-menu" class="md:hidden hover:bg-brand/10 transition-all duration-300 text-brand p-2 rounded-full">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div data-target="mobile-menu" class="md:hidden hidden overflow-hidden border-t border-brandLight/30 bg-white/90 backdrop-blur">
+            <div class="px-3 py-2 flex flex-col">
+                <a href="./index.html" class="block py-3 text-sm font-medium text-brand hover:bg-brand/10 px-4 rounded transition-all duration-300">Accueil</a>
+                <a href="./produits.html" class="block py-3 text-sm font-medium hover:text-brand hover:bg-brand/10 px-4 rounded transition-all duration-300">Nos Produits</a>
+                <a href="./apropos.html" class="block py-3 text-sm font-medium hover:text-brand hover:bg-brand/10 px-4 rounded transition-all duration-300">À propos</a>
+                <a href="https://drive.google.com/file/d/1p3f0E1imdBeOcS-DdcKqDrcNCQjilqkf/view?usp=sharing" target="_blank" rel="noreferrer" class="block py-3 text-sm font-medium hover:text-brand hover:bg-brand/10 px-4 rounded transition-all duration-300">Catalogue</a>
+                <a href="./contact.html" class="block py-3 text-sm font-medium hover:text-brand hover:bg-brand/10 px-4 rounded transition-all duration-300">Contact</a>
+                <div class="mt-2 flex items-center justify-center gap-4">
+                    <button class="relative hover:bg-brand/10 transition-all duration-300 p-2 rounded-full">
+                        <svg class="h-6 w-6 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                        </svg>
+                    </button>
+                    <button class="relative hover:bg-brand/10 transition-all duration-300 p-2 rounded-full">
+                        <svg class="h-6 w-6 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-5v6a2 2 0 01-2 2H9a2 2 0 01-2-2v-6m8 0V9a2 2 0 00-2-2H9a2 2 0 00-2 2v4.01"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="mt-4 pt-4 border-t border-brandLight/30 space-y-3">
+                    <a href="tel:+212530562079" class="flex items-center space-x-2 text-sm text-brandDark/80 hover:text-brand transition-colors">
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                        </svg>
+                        <span>+212 530 56 20 79</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+        <section class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-[#3b2c27] via-[#b37651] to-[#d4b29a] overflow-hidden">
+            <div class="absolute inset-0 bg-black/20"></div>
+            <div class="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-serif font-bold mb-6 animate-fade-in">
+                    Palmador Chocolatier
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 font-light animate-slide-up">
+                    L'art du chocolat artisanal pour vos moments les plus précieux
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center animate-scale-in">
+                    <a href="./produits.html" class="bg-white text-brand px-8 py-3 rounded-xl font-semibold hover:bg-brandLight hover:text-white transition-all duration-300 hover:scale-105">
+                        Découvrir nos créations
+                    </a>
+                    <a href="./contact.html" class="border-2 border-white text-white px-8 py-3 rounded-xl font-semibold hover:bg-white hover:text-brand transition-all duration-300 hover:scale-105">
+                        Nous contacter
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-brandDark mb-4">
+                        Nos Créations Signature
+                    </h2>
+                    <p class="text-lg text-brandDark/70 max-w-2xl mx-auto">
+                        Découvrez notre sélection de chocolats artisanaux, créés avec passion et savoir-faire
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                        <div class="aspect-square overflow-hidden">
+                            <img src="./images/coffret-large.jpg" alt="Coffret Prestige" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-serif text-xl font-semibold text-brandDark mb-2">Coffret Prestige</h3>
+                            <p class="text-brandDark/70 mb-4">Collection exclusive de chocolats fins artisanaux</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-brand">450 MAD</span>
+                                <a href="./produits.html" class="bg-brand text-white px-4 py-2 rounded-lg hover:bg-brandDark transition-colors">
+                                    Découvrir
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                        <div class="aspect-square overflow-hidden">
+                            <img src="./images/coupe-audace-gold.jpg" alt="Coupe Audace Gold" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-serif text-xl font-semibold text-brandDark mb-2">Coupe Audace Gold</h3>
+                            <p class="text-brandDark/70 mb-4">Coupe dorée avec chocolats audacieux</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-brand">320 MAD</span>
+                                <a href="./produits.html" class="bg-brand text-white px-4 py-2 rounded-lg hover:bg-brandDark transition-colors">
+                                    Découvrir
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                        <div class="aspect-square overflow-hidden">
+                            <img src="./images/coffret-medium.jpg" alt="Coffret Luxe" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-serif text-xl font-semibold text-brandDark mb-2">Coffret Luxe</h3>
+                            <p class="text-brandDark/70 mb-4">Coffret de chocolats fins aux saveurs raffinées</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-brand">380 MAD</span>
+                                <a href="./produits.html" class="bg-brand text-white px-4 py-2 rounded-lg hover:bg-brandDark transition-colors">
+                                    Découvrir
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="py-20 bg-gradient-to-br from-[#f7f3ee] to-[#d4b29a]/30">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-serif font-bold text-brandDark mb-6">
+                            L'art du chocolat depuis 2010
+                        </h2>
+                        <p class="text-lg text-brandDark/70 mb-6">
+                            Palmador Chocolatier perpétue la tradition du chocolat artisanal avec passion et créativité. 
+                            Chaque création est le fruit d'un savoir-faire transmis de génération en génération.
+                        </p>
+                        <p class="text-lg text-brandDark/70 mb-8">
+                            Nous sélectionnons les meilleurs cacaos du monde pour créer des chocolats d'exception, 
+                            parfaits pour vos événements les plus importants.
+                        </p>
+                        <a href="./apropos.html" class="bg-brand text-white px-6 py-3 rounded-xl font-semibold hover:bg-brandDark transition-colors hover:scale-105 inline-block">
+                            En savoir plus
+                        </a>
+                    </div>
+                    <div class="relative">
+                        <img src="./images/hero-chocolate.jpg" alt="Chocolatier Palmador" class="rounded-2xl shadow-lg">
+                        <div class="absolute -bottom-6 -right-6 bg-brand text-white p-6 rounded-2xl shadow-lg">
+                            <div class="text-center">
+                                <div class="text-3xl font-bold">13+</div>
+                                <div class="text-sm">Années d'expérience</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-[#3b2c27] to-[#b37651] text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <img src="./PALMA.svg" alt="Palmador" class="h-8 w-8 filter brightness-0 invert">
+                        <span class="font-serif text-xl">Palmador</span>
+                    </div>
+                    <p class="text-white/80 mb-4">
+                        Chocolatier artisanal de luxe, créateur de moments magiques depuis 2010.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold mb-4">Navigation</h3>
+                    <ul class="space-y-2">
+                        <li><a href="./index.html" class="text-white/80 hover:text-white transition-colors">Accueil</a></li>
+                        <li><a href="./produits.html" class="text-white/80 hover:text-white transition-colors">Nos Produits</a></li>
+                        <li><a href="./apropos.html" class="text-white/80 hover:text-white transition-colors">À Propos</a></li>
+                        <li><a href="./contact.html" class="text-white/80 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold mb-4">Contact</h3>
+                    <div class="space-y-2 text-white/80">
+                        <p>Av. Moulay abderrahmane</p>
+                        <p>Kenitra, Maroc</p>
+                        <p>+212 530 56 20 79</p>
+                        <p>+212 660 43 60 40</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold mb-4">Horaires</h3>
+                    <div class="space-y-2 text-white/80">
+                        <p>Lun - Sam: 09h00 - 20h00</p>
+                        <p>Dimanche: Fermé</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/20 mt-8 pt-8 text-center text-white/80">
+                <p>&copy; 2024 Palmador Chocolatier. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button data-target="scroll-top" class="fixed bottom-5 right-5 z-40 rounded-full bg-brand text-white p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 hidden">
+        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </button>
+
+    <!-- WhatsApp Button -->
+    <button data-target="whatsapp-button" class="fixed bottom-5 left-5 z-40 rounded-full bg-green-500 text-white p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110">
+        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+        </svg>
+    </button>
+
+    <!-- Product Modal Container -->
+    <div data-target="product-modal"></div>
+
+    <!-- Scripts -->
+    <script src="./app.js"></script>
+</body>
+</html>
