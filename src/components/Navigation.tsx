@@ -56,7 +56,7 @@ const Navigation = () => {
     { name: "Accueil", href: "/" },
     { name: "Nos Produits", href: "/produits" },
     { name: "À Propos", href: "/apropos" },
-    { name: "Catalogue", href: "/Catalogue 2025- Palmador Chocolatier final.pdf", external: true },
+    { name: "Catalogue", href: "https://drive.google.com/file/d/1p3f0E1imdBeOcS-DdcKqDrcNCQjilqkf/view?usp=sharing", external: true },
     { name: "Contact", href: "/contact" },
   ];
 
