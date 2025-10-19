@@ -10,12 +10,12 @@ export interface Product {
 }
 
 // Récupérer toutes les images via glob pour Vercel
-const coffrets = import.meta.glob('../assets/products/coffrets/*.{png,jpg,jpeg,webp,avif}', { eager: true, as: 'url' });
-const coupes = import.meta.glob('../assets/products/coupes/*.{png,jpg,jpeg,webp,avif}', { eager: true, as: 'url' });
-const tablettes = import.meta.glob('../assets/products/tablettes/*.{png,jpg,jpeg,webp,avif}', { eager: true, as: 'url' });
+const coffrets = import.meta.glob('../assets/products/coffrets/*.{png,jpg,jpeg,webp,avif}', { eager: true, query: '?url', import: 'default' });
+const coupes = import.meta.glob('../assets/products/coupes/*.{png,jpg,jpeg,webp,avif}', { eager: true, query: '?url', import: 'default' });
+const tablettes = import.meta.glob('../assets/products/tablettes/*.{png,jpg,jpeg,webp,avif}', { eager: true, query: '?url', import: 'default' });
 
 // Fallback images depuis les assets existants
-const fallbackImages = import.meta.glob('../assets/*.{png,jpg,jpeg,webp,avif}', { eager: true, as: 'url' });
+const fallbackImages = import.meta.glob('../assets/*.{png,jpg,jpeg,webp,avif}', { eager: true, query: '?url', import: 'default' });
 
 // Fabrique une liste de produits à partir des fichiers
 function mapToProducts(
